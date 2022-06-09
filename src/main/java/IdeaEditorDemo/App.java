@@ -12,6 +12,7 @@ package IdeaEditorDemo;
 
 import br.unicamp.cst.representation.idea.Idea;
 import br.unicamp.cst.util.viewer.representation.idea.IdeaEditor;
+import javax.swing.WindowConstants;
 
 public class App {
     public IdeaEditor ie;
@@ -20,6 +21,7 @@ public class App {
         Idea root = new Idea("root",2);
         ie = new IdeaEditor(root,true);
         ie.setVisible(true);
+        ie.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
             
 

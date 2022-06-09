@@ -44,11 +44,7 @@ application {
     mainClass = 'IdeaEditorDemo.App'
 }
 
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
-}
-task uberJar(type: Jar) {
+jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     archiveClassifier = 'full'
     manifest {
@@ -62,4 +58,9 @@ task uberJar(type: Jar) {
         configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
     }
     exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
 }
