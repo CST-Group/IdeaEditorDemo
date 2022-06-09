@@ -30,8 +30,8 @@ repositories {
 }
 
 dependencies {
-    //implementation 'com.github.CST-Group:cst-desktop:1.0.3'
-    implementation ':cst-desktop:1.0.3-full'
+    implementation 'com.github.CST-Group:cst-desktop:1.0.3'
+    //implementation ':cst-desktop:1.0.3-full'
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
 
